@@ -28,7 +28,6 @@ def filter_id(tuple_id):
 def id_list_gen(keywords):
     search_list = list(keywords)
     search_list.append("")
-    print(keywords)
     generated_tuple = list(itertools.product(search_list, ["", "_"], search_list, ["", "_"], keywords))
     result = list(map(filter_id, generated_tuple))
     result=list(filter(None, result))
