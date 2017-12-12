@@ -10,6 +10,7 @@ import requests
 import string
 
 ValidLetters=string.ascii_letters+string.digits+"_"
+version="0.1"
 def create_random_sleep(index=1,min_time=0.25,max_time=3):
     '''
     This function generate sleep time with random processes
@@ -26,6 +27,17 @@ def create_random_sleep(index=1,min_time=0.25,max_time=3):
     else:
         time_sleep = random.uniform(min_time, max_time)
     return time_sleep
+
+def TIR_help_func():
+    '''
+    Print Help Page
+    :return: None
+    '''
+    tprint("TIR")
+    tprint("v"+version)
+    print("Help : \n")
+    print("     - all 'your_keywords' --> (All Users) Example : 'python -m TIR all keyword1,keyword2,keyword3'\n")
+    print("     - bot 'your_keywords' --> (Bot Users) Example : 'python -m TIR bot keyword1,keyword2,keyword3'\n")
 
 def id_check(input_id):
     try:
