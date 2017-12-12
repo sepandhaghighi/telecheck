@@ -35,6 +35,7 @@ def TIR_help_func():
     '''
     tprint("TIR")
     tprint("v"+version)
+    print("You can use a-z,0-9 and underscores: \n")
     print("Help : \n")
     print("     - all 'your_keywords' --> (All Users) Example : 'python -m TIR all keyword1,keyword2,keyword3'\n")
     print("     - bot 'your_keywords' --> (Bot Users) Example : 'python -m TIR bot keyword1,keyword2,keyword3'\n")
