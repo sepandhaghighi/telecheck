@@ -9,6 +9,23 @@ import time
 import requests
 
 
+def create_random_sleep(index=1,min_time=0.25,max_time=3):
+    '''
+    This function generate sleep time with random processes
+    :param index: index to determine first page  and messages(index = 0 is for first page)
+    :param min_time: minimum time of sleep
+    :param max_time: maximum time of sleep
+    :type index:int
+    :type min_time:int
+    :type max_time:int
+    :return: time of sleep as integer (a number between max and min)
+    '''
+    if index==0:
+        time_sleep = 1
+    else:
+        time_sleep = random.uniform(min_time, max_time)
+    return time_sleep
+
 def id_check(input_id):
     try:
         response = requests.get("https://t.me/" + input_id)
@@ -34,6 +51,6 @@ def id_list_gen(keywords):
     return result
 
 def run(id):
-    time.sleep(2)
+    time.sleep(create_random_sleep())
     if id_check(id)==True:
         print(id)
