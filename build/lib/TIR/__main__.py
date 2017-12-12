@@ -18,7 +18,6 @@ if __name__=="__main__":
                 save_id(ValidIDList,len(gen_list))
             elif args[1].upper()=="BOT":
                 gen_list = id_list_gen(keywords,"bot")
-                print(len(gen_list))
                 ValidIDList=p.map(run, gen_list)
                 save_id(ValidIDList,len(gen_list))
             else:

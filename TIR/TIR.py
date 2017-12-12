@@ -8,9 +8,12 @@ import random
 import time
 import requests
 import string
+import datetime
 
 ValidLetters=string.ascii_letters+string.digits+"_"
 version="0.1"
+def line(char="*",number=30):
+    print(char*number)
 def create_random_sleep(index=1,min_time=0.25,max_time=3):
     '''
     This function generate sleep time with random processes
@@ -88,7 +91,13 @@ def run(id):
 
 def save_id(data,list_len):
     filtered_data=list(filter(None, data))
-    print(str(len(filtered_data))+" Usernames Out Of "+str(list_len)+" Are Valid")
+    ValidLength=str(len(filtered_data))
+    print("Total : "+str(list_len))
+    print("Valid Usernames : "+ValidLength)
+    line()
     file=open("TIR_ID.log","w")
+    file.write(str(datetime.datetime.now())+"\n")
+    file.write("Total : "+str(list_len)+"\n")
+    file.write("Valid Usernames : "+ValidLength+"\n")
     file.write("\n".join(filtered_data))
     file.close()
