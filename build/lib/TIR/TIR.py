@@ -7,8 +7,9 @@ from art import tprint
 import random
 import time
 import requests
+import string
 
-
+ValidLetters=string.ascii_letters+string.digits+"_"
 def create_random_sleep(index=1,min_time=0.25,max_time=3):
     '''
     This function generate sleep time with random processes
@@ -36,6 +37,17 @@ def id_check(input_id):
             return True
     except Exception as e:
         print("[Error] Getting " + input_id + " Information")
+def filter_keyword(keywords):
+    filtered_keywords=[]
+    try:
+        for item in keywords:
+            for i in item:
+                if i not in ValidLetters:
+                    break
+            filtered_keywords.append(item)
+        return filtered_keywords
+    except Exception :
+        return keywords
 
 def filter_id(tuple_id):
     id="".join(list(tuple_id))
