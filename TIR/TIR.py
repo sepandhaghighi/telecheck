@@ -11,6 +11,7 @@ import string
 
 ValidLetters=string.ascii_letters+string.digits+"_"
 version="0.1"
+ValidIDList=[]
 def create_random_sleep(index=1,min_time=0.25,max_time=3):
     '''
     This function generate sleep time with random processes
@@ -67,15 +68,26 @@ def filter_id(tuple_id):
     if len(id)>5:
         return id
 
-def id_list_gen(keywords):
+def id_list_gen(keywords,mode="all"):
     search_list = list(keywords)
     search_list.append("")
-    generated_tuple = list(itertools.product(search_list, ["", "_"], search_list, ["", "_"], keywords,["", "_"]))
+    first_list=list(filter(lambda x: not x.isdigit(), keywords))
+    if mode=="all":
+        generated_tuple = list(itertools.product(first_list, ["", "_"], search_list, ["", "_"], keywords))
+    else:
+        generated_tuple = list(itertools.product(first_list, ["", "_"], search_list, ["", "_"], keywords, ["", "_"],["bot"]))
     result = list(map(filter_id, generated_tuple))
     result=list(filter(None, result))
     return result
 
 def run(id):
     time.sleep(create_random_sleep())
+    global ValidIDList
     if id_check(id)==True:
         print(id)
+        ValidIDList.append(id)
+
+def save_id():
+    file=open("TIR_ID.log","w")
+    file.write("\n".join(ValidIDList))
+    file.close()

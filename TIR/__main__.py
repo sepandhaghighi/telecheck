@@ -10,13 +10,16 @@ if __name__=="__main__":
             doctest.testfile("test.py",optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS, verbose=True)
         if len(args)>2:
             keywords = filter_keyword(args[2].split(","))
-            gen_list = id_list_gen(keywords)
             p=mu.Pool(4)
             if args[1].upper()=="ALL":
+                gen_list = id_list_gen(keywords)
                 p.map(run,gen_list)
+                save_id()
             elif args[1].upper()=="BOT":
-                gen_list=list(map(lambda x:x+"bot",gen_list))
+                gen_list = id_list_gen(keywords,"bot")
                 p.map(run, gen_list)
+                save_id()
+
             else:
                 TIR_help_func()
         else:
