@@ -14,6 +14,11 @@ if __name__=="__main__":
         elif args[1].upper()=="BOT":
             gen_list=list(map(lambda x:x+"bot",gen_list))
             p.map(run, gen_list)
+        else:
+            TIR_help_func()
+    else:
+        TIR_help_func()
+
 
 
 
