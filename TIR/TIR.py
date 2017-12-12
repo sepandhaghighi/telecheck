@@ -92,8 +92,13 @@ def run(id):
 def save_id(data,list_len):
     filtered_data=list(filter(None, data))
     ValidLength=str(len(filtered_data))
-    print("Total : "+str(list_len))
-    print("Valid Usernames : "+ValidLength)
+    if list_len==0:
+        print("No Valid Username!!(Choose Better Keywords)")
+    elif ValidLength=="0":
+        print("No Available Username!!!")
+    line()
+    print("Total Valid Usernames : " + str(list_len))
+    print("Available Usernames : " + ValidLength)
     line()
     file=open("TIR_ID.log","w")
     file.write(str(datetime.datetime.now())+"\n")
@@ -101,3 +106,4 @@ def save_id(data,list_len):
     file.write("Valid Usernames : "+ValidLength+"\n")
     file.write("\n".join(filtered_data))
     file.close()
+
