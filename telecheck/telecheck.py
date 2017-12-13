@@ -66,9 +66,9 @@ def filter_keyword(keywords):
         return keywords
 
 def filter_id(tuple_id):
-    id="".join(list(tuple_id))
-    if (len(id)>5) and ("__" not in id):
-        return id
+    test_id="".join(list(tuple_id))
+    if (len(test_id)>5) and ("__" not in test_id):
+        return test_id
 
 def id_list_gen(keywords,mode="all"):
     search_list = list(keywords)
