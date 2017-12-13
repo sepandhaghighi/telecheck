@@ -8,7 +8,7 @@ if __name__=="__main__":
     if len(args)>1:
         if len(args)>2:
             keywords = filter_keyword(args[2].split(","))
-            p=mu.Pool(4)
+            p=mu.Pool(mu.cpu_count())
             if args[1].upper()=="ALL":
                 print("Generating ...")
                 gen_list = id_list_gen(keywords)
