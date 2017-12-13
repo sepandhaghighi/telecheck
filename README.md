@@ -20,7 +20,7 @@ Simple CLI Tool For Generating Available Telegram Usernames
 ## Installation		
 
 ### Source Code
-- Download [Version 0.5](https://github.com/sepandhaghighi/telecheck/archive/v0.1.zip) or [Latest Source ](https://github.com/sepandhaghighi/telecheck/archive/master.zip)
+- Download [Version 0.1](https://github.com/sepandhaghighi/telecheck/archive/v0.1.zip) or [Latest Source ](https://github.com/sepandhaghighi/telecheck/archive/master.zip)
 - `pip install -r requirements.txt` or `pip3 install -r requirements.txt` (Need root access)
 - `python3 setup.py install` or `python setup.py install` (Need root access)				
 
