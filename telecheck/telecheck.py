@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-import re
 import itertools
-from functools import partial
-import multiprocessing as mu
 from art import tprint
 import random
 import time
@@ -53,7 +50,7 @@ def id_check(input_id):
             return False
         else:
             return True
-    except Exception as e:
+    except Exception:
         print("[Error] Getting " + input_id + " Information")
 def filter_keyword(keywords):
     filtered_keywords=[]
@@ -84,12 +81,11 @@ def id_list_gen(keywords,mode="all"):
     result=list(filter(None, result))
     return result
 
-def run(id):
+def run(input_id):
     time.sleep(create_random_sleep())
-    global ValidIDList
-    if id_check(id)==True:
-        print(id)
-        return id
+    if id_check(input_id)==True:
+        print(input_id)
+        return input_id
 
 def save_id(data,list_len):
     filtered_data=list(filter(None, data))
