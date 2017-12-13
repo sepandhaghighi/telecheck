@@ -15,13 +15,13 @@ if __name__=="__main__":
             if args[1].upper()=="ALL":
                 print("Generating ...")
                 gen_list = id_list_gen(keywords)
-                gen_list.sort(key=lambda s: len(s))
+                gen_list.sort(key=len)
                 ValidIDList=p.map(run,gen_list)
                 save_id(ValidIDList,len(gen_list))
             elif args[1].upper()=="BOT":
                 print("Generating ...")
                 gen_list = id_list_gen(keywords,"bot")
-                gen_list.sort(key=lambda s: len(s))
+                gen_list.sort(key=len)
                 ValidIDList=p.map(run, gen_list)
                 save_id(ValidIDList,len(gen_list))
             else:
