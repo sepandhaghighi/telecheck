@@ -1,5 +1,6 @@
 <div align="center">
 <img src="otherfile/telegram.png" width=200px height=200px>
+<h1>Telecheck</h1>
 <br/>
 
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3" /></a>
@@ -15,6 +16,7 @@ Simple CLI Tool For Generating Available Telegram Usernames
 
 ### Source Code
 - Download [Version 0.5](https://github.com/sepandhaghighi/telecheck/archive/v0.1.zip) or [Latest Source ](https://github.com/sepandhaghighi/telecheck/archive/master.zip)
+- `pip install -r requirements.txt` or `pip3 install -r requirements.txt` (Need root access)
 - `python3 setup.py install` or `python setup.py install` (Need root access)				
 
 ### PyPI
@@ -27,8 +29,8 @@ Simple CLI Tool For Generating Available Telegram Usernames
 
 ### CLI			
 
-- Bot : `python -m telecheck bot keyword1,keyword2,...`
-- All :  `python -m telecheck all keyword1,keyword2,...`
+- Bot : `python -m telecheck bot keyword1,keyword2,...` or `python3 -m telecheck bot keyword1,keyword2,...`
+- All :  `python -m telecheck all keyword1,keyword2,...` or `python3 -m telecheck all keyword1,keyword2,...`
 			
 
 

@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
 from .telecheck import *
 import sys
-import doctest
 import multiprocessing as mu
 ValidIDList=[]
 if __name__=="__main__":
     args=sys.argv
     if len(args)>1:
-        if args[1].upper()=="TEST":
-            doctest.testfile("test.py",optionflags=doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS, verbose=True)
         if len(args)>2:
             keywords = filter_keyword(args[2].split(","))
             p=mu.Pool(4)
