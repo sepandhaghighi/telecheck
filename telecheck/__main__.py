@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .TIR import *
+from .telecheck import *
 import sys
 import doctest
 import multiprocessing as mu
@@ -13,11 +13,13 @@ if __name__=="__main__":
             keywords = filter_keyword(args[2].split(","))
             p=mu.Pool(4)
             if args[1].upper()=="ALL":
+                print("Generating ...")
                 gen_list = id_list_gen(keywords)
                 gen_list.sort(key=lambda s: len(s))
                 ValidIDList=p.map(run,gen_list)
                 save_id(ValidIDList,len(gen_list))
             elif args[1].upper()=="BOT":
+                print("Generating ...")
                 gen_list = id_list_gen(keywords,"bot")
                 gen_list.sort(key=lambda s: len(s))
                 ValidIDList=p.map(run, gen_list)

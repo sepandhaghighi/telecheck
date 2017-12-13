@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .TIR import *
+from .telecheck import *
 import sys
 import doctest
 import multiprocessing as mu
