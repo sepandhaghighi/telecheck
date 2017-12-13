@@ -5,6 +5,7 @@ import random
 import time
 import requests
 import string
+import os
 import datetime
 
 ValidLetters=string.ascii_letters+string.digits+"_"
@@ -104,4 +105,5 @@ def save_id(data,list_len):
     file.write("Valid Usernames : "+ValidLength+"\n")
     file.write("\n".join(filtered_data))
     file.close()
+    print("Log File --> "+os.getcwd())
 
