@@ -75,7 +75,7 @@ def id_list_gen(keywords,mode="all"):
     search_list.append("")
     first_list=list(filter(lambda x: not x.isdigit(), keywords))
     if mode=="all":
-        generated_tuple = list(itertools.product(first_list, ["", "_"], search_list, ["", "_"], keywords,DigitList))
+        generated_tuple = list(itertools.product(first_list, ["", "_"], search_list, ["", "_"], search_list,DigitList))
     else:
         generated_tuple = list(itertools.product(first_list, ["", "_"], search_list, ["", "_"], search_list, ["", "_"],DigitList,["bot"]))
     result = list(map(filter_id, generated_tuple))
