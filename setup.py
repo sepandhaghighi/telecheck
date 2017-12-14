@@ -13,7 +13,17 @@ setup(
   install_requires=[
       'art',
 	  'codecov',
+      'requests',
       ],
-  classifiers = [],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Internet',
+    ],
   license='MIT',
 )
