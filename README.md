@@ -9,6 +9,7 @@
 <a href="https://codecov.io/gh/sepandhaghighi/telecheck">
   <img src="https://codecov.io/gh/sepandhaghighi/telecheck/branch/master/graph/badge.svg" />
 </a>
+<a href="https://badge.fury.io/py/telecheck"><img src="https://badge.fury.io/py/telecheck.svg" alt="PyPI version" height="18"></a>
 
 </div>
 	
