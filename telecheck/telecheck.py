@@ -67,7 +67,7 @@ def filter_keyword(keywords):
 
 def filter_id(tuple_id):
     test_id="".join(list(tuple_id))
-    if (len(test_id)>5) and ("__" not in test_id):
+    if (len(test_id)>5) and ("__" not in test_id) and (test_id[-1]!="_"):
         return test_id
 
 def id_list_gen(keywords,mode="all"):
@@ -88,6 +88,8 @@ def run(input_id):
     if id_check(input_id)==True:
         print(input_id)
         return input_id
+
+
 
 def save_id(data,list_len):
     filtered_data=list(filter(None, data))
