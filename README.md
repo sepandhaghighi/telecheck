@@ -37,7 +37,8 @@ Simple CLI Tool For Generating Available Telegram Usernames
 
 - Bot : `python -m telecheck bot keyword1,keyword2,...` or `python3 -m telecheck bot keyword1,keyword2,...`
 - All :  `python -m telecheck all keyword1,keyword2,...` or `python3 -m telecheck all keyword1,keyword2,...`
-			
+
+<a href="https://asciinema.org/a/152599" target="_blank"><img src="https://asciinema.org/a/152599.png" /></a>			
 
 
 ## Issues & Bug Reports			
